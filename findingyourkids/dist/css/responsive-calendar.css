@@ -1,0 +1,28 @@
+.responsive-calendar{padding:0 50px 50px}
+.responsive-calendar .controls{text-align:center;padding-bottom:53px}
+.responsive-calendar .controls a{cursor:pointer}
+.responsive-calendar .controls h4{display:inline;float:left;font-size:24px;padding:0 0 0 22px}
+.responsive-calendar .day-headers,.responsive-calendar .days{font-size:0}
+.responsive-calendar .day{display:inline-block;position:relative;font-size:24px;width:14.285714285714%;text-align:center}
+.responsive-calendar .day a{color:#000;display:block;cursor:pointer;padding:20% 0;font-size:24px}
+.responsive-calendar .day a:hover{background-color:#eee;text-decoration:none}
+.responsive-calendar .day.header{border-bottom:0 gray solid}
+.responsive-calendar .day.active a{background-color:#fe9700;color:#fff}
+.responsive-calendar .day.active a:hover{background-color:#36a0e2}
+.responsive-calendar .day.active .not-current{background-color:#ebbe44;color:#fff}
+.responsive-calendar .day.active .not-current:hover{background-color:#ebbe44}
+.responsive-calendar .day.not-current a{color:#ebbe44;background-color:#ebbe44;display:none}
+.responsive-calendar .day .badge{position:absolute;top:2px;right:2px;z-index:1}
+.event-calender h4{font-size:36px;padding:5px 0 0 70px;margin:0 0 5px}
+.btn-cont .pull-left{float:right!important;margin-right:10px}
+.btn-cont .pull-left .btn-primary{background:url(../../images/icon-arrowLeftbk.png) no-repeat;border:0 none;text-align:center;text-indent:-999px;width:10px;height:18px}
+.btn-cont .pull-right .btn-primary{background:url(../../images/icon-arrowRightbk.png) no-repeat;border:0 none;text-align:center;text-indent:-999px;width:10px;height:18px}
+.btn-cont .pull-left .btn-primary:hover,.btn-cont .pull-right .btn-primary:hover{box-shadow:none}
+@media screen and (min-width:280px) and (max-width:400px){
+.event-calender h4{font-size:28px;padding:28px 0 0 19px}
+.responsive-calendar{padding:20px;line-height:21px}
+.responsive-calendar .controls h4{padding:0 0 0 6px;font-size:18px}
+.responsive-calendar .day-headers,.responsive-calendar .days{font-size:0}
+.responsive-calendar .day{font-size:14px;width:14.285714285714%}
+.responsive-calendar .day a{font-size:14px}
+}

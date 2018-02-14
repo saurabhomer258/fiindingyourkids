@@ -1,0 +1,651 @@
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+
+<!-- Mirrored from www.worldvision.in/index.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Feb 2018 08:47:28 GMT -->
+<!-- Added by HTTrack --><meta http-equiv="content-type" content="text/html;charset=utf-8" /><!-- /Added by HTTrack -->
+<head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="author" />
+    <meta name="google-site-verification" content="IPWfpUvGZIcTlROYnTdL79SMsVDOkMRqHORXUalGPPo" />
+    <meta name="keywords" content="NGO for child right, NGO for child education in India, ngo working for underprivileged children, ngo working for child education" />
+    <meta name="description" content="World Vision is an NGO based in India working for the rights for underprivileged children and their education. Our aim is to bring smiles on every child&#39;s face." />
+    <meta http-equiv="cache-control" content="max-age=0" />
+    <meta http-equiv="cache-control" content="no-cache" />
+    <meta http-equiv="expires" content="0" />
+    <meta http-equiv="expires" content="Tue, 01 Jan 1990 12:00:00 GMT" />
+    <link rel="icon" href="images/wv_favicon.ico" />
+    <title>Finding Kids</title>
+    <link rel="stylesheet" type="text/css" href="css/gridba3a.css?ver=101" />
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap.min.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/bootstrap-select.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/responsive-calendar.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/easyResponsiveTabs.css" />
+    <link rel="stylesheet" type="text/css" href="css/jquery-ui.css" />
+    <link rel="stylesheet" type="text/css" href="dist/css/tab.css" />
+    <link rel="stylesheet" type="text/css" href="css/custom-nav-styles.css" />
+    <script type='text/javascript' src='js/inner-jquery.min.js'></script> 
+    <script type="text/javascript" src="js/inner.js"></script>
+    <style type="text/css">
+.mob_login{display:none !important}
+@media screen and (min-width:280px) and (max-width:640px){.mob_login{display:block !important} }
+</style>
+<!--[if lt IE 9]>
+<script src="js/html5shiv.min.js"></script>
+<script src="js/respond.min.js"></script>
+<![endif]-->
+<script type="text/javascript">
+function initialize(){
+	//Sys.WebForms.PageRequestManager.getInstance().add_endRequest(EndRequestHandler);
+}
+$(document).ready(function(){
+	//alert("");
+});
+</script>
+
+<style type="text/css">
+html, body{padding-top:0 !important}
+.carousel-caption{top:100px;color:#fff}
+.sliders{margin-top:69px}
+.wrp{position:initial !important}
+.FrameAnimationfixed{margin-right:8% !important}
+.carousel-indicators li{display:block}
+.carousel-indicators{left:3%;width:20px;margin-left:0;text-align:left;top:50%}
+</style>
+<script type="text/javascript">
+$(window).resize(function(e){
+    //setwidth();
+    //slideAnimation()
+});
+$(document).ready(function(e){
+    $('.sliders').carousel({ pause: "hover", interval: 4000/*, ride:false */ });
+    $('.carousel-indicators li').click(function(e){
+        e.stopPropagation();
+        var goTo = $(this).data('slide-to');
+        $('.carousel-inner .item').each(function(index){
+            if ($(this).data('id') == goTo){
+                goTo = index;
+                return false;
+            }
+        });
+        $('.sliders').carousel(goTo);
+    });
+    /*$('.carousel-control').click(function(e){
+        e.stopPropagation();
+        var goTo = $(this).dat a('data-slide');
+        if (goTo == "prev"){
+            $('.sliders').carousel('prev');
+        } else {
+            $('.sliders').carousel('next');
+        }
+    });*/
+    //setwidth();
+    //slideAnimation()
+    /* Update Daynemic Page Slide with Navigation */
+    //var html = '';
+    //html += '<li class="active" data-slide="1">&nbsp;</li>';
+    //var dataslidepg = 2;
+    //for (var dotsl = 1; dotsl < $('.PageSlideBann').length; dotsl++){
+    //    html += '<li data-slide="' + dataslidepg + '">&nbsp;</li>';
+    //    dataslidepg++;
+    //}
+    //$('ul.navigation').html(html);
+
+    //$('.navigation').find('li').on('click', function(){
+    //    htmlbody.animate({
+    //        scrollTop: $('.slide[data-slide="' + $(this).attr('data-slide') + '"]').offset().top //+ 300
+    //    }, 1500);
+    //});
+
+    var PSBtotalHeight = 0;
+    $('.PageSlideBann').each(function(index, element){
+        var cusheight = $(this).outerHeight(true);
+        PSBtotalHeight = parseInt(PSBtotalHeight + cusheight);
+    });
+    $(window).scroll(function(){
+        var height = $(window).height();
+        var scrollTop = parseInt($(window).scrollTop());
+        //if (scrollTop > parseInt((PSBtotalHeight - ($('.PageSlideBann').height() - 200)))){
+        //    $('.navigation').hide();
+        //} else {
+        //    $('.navigation').show();
+        //};
+
+        var AnimationPageSlideHT = parseInt((PSBtotalHeight - ($('.PageSlideBann').height())));
+        if (scrollTop > AnimationPageSlideHT){
+            $('.bg1slide').stop().animate({ top: '-700px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '700px' }, 1000);
+        }
+        if (scrollTop > parseInt(AnimationPageSlideHT + 50)){
+            $('.bg1slide').stop().animate({ top: '-600px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '600px' }, 1000);
+        }
+        if (scrollTop > parseInt(AnimationPageSlideHT + 100)){
+            $('.bg1slide').stop().animate({ top: '-600px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '500px' }, 1000);
+        }
+        if (scrollTop > parseInt(AnimationPageSlideHT + 150)){
+            $('.bg1slide').stop().animate({ top: '-500px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '400px' }, 1000);
+        }
+        if (scrollTop > parseInt(AnimationPageSlideHT + 200)){
+            $('.bg1slide').stop().animate({ top: '-400px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '300px' }, 1000);
+        }
+        if (scrollTop > parseInt(AnimationPageSlideHT + 250)){
+            $('.bg1slide').stop().animate({ top: '-300px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '200px' }, 1000);
+        }
+        if (scrollTop > parseInt(AnimationPageSlideHT + 300)){
+            $('.bg1slide').stop().animate({ top: '-200px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '100px' }, 1000);
+        }
+        if (scrollTop > parseInt(AnimationPageSlideHT + 400)){
+            $('.bg1slide').stop().animate({ top: '0px' }, 1000);
+            $('.bg2slide').stop().animate({ top: '0px' }, 1000);
+        }
+    });
+});
+</script>
+
+<script type="text/javascript">
+$(document).ready(function(){
+    $(".more-btn").hover(function(){
+        $(".more-link-box").slideToggle("1000");
+    });
+    $(".search").click(function(){
+        $(".input-search").stop().show().animate({ width: '780px', }, 500);
+    });
+    $(".close-btn").click(function(){
+        $(".input-search ").hide().animate({ width: '0px' }, 500);
+    });
+    if ($(window).width() <= 980){
+        $(".search").click(function(){
+            $(".input-search").stop().show().animate({ width: '96%', }, 500);
+        });
+        $(".close-btn").click(function(){
+            $(".input-search ").hide().animate({ width: '0px' }, 500);
+        });
+        $(".mobile-btn-link").click(function(){
+            $("#header ul").slideToggle("1000");
+        });
+        $(".click-mobile").click(function(){
+            $(".open-mobile").slideToggle("1000");
+        });
+        $(".click-mobile-get").click(function(){
+            $(".open-mobile-get").slideToggle("1000");
+        });
+    }
+});
+</script>
+<script type="text/javascript">
+function myFunction(){
+    var div = $('.new-ChildSider ul li.active');
+    var img = $(div).find("img");
+    $("[id$=activeChildId]").val($(img).attr("alt"));
+    //PageMethods.btnSearch_Click(parseInt($("[id$=activeChildId]").val())); $(div).addClass("active");
+    $("[id$=hiddenBtn]").trigger("click");
+}
+function myChildFunction(){
+    var div = $('.new-ChildSider ul li.active');
+    var img = $(div).find("img");
+    $("[id$=HiddenFieldChildID]").val($(img).attr("alt"));
+    //PageMethods.btnSearch_Click(parseInt($("[id$=activeChildId]").val()));
+    $("[id$=BtnHidden]").trigger("click");
+}
+</script>
+
+<!--Google Tag Manager Added on 17-08-2017 - si.worldvision.in-->
+<script type="text/javascript">(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MR7QTL');</script>
+<!-- End Google Tag Manager -->
+</head>
+<body onload="initialize()">
+<!--Google Tag Manager (noscript) Added on 17-08-2017 - si.worldvision.in-->
+<noscript><iframe src="https://www.googletagmanager.com/ns.html?id=GTM-MR7QTL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<!-- End Google Tag Manager (noscript) -->
+<!-- Google Tag Manager 26/05/2016-->
+<noscript><iframe src="http://www.googletagmanager.com/ns.html?id=GTM-MR7QTL"
+height="0" width="0" style="display:none;visibility:hidden"></iframe></noscript>
+<script>(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+'../www.googletagmanager.com/gtm5445.html?id='+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,'script','dataLayer','GTM-MR7QTL');</script>
+<!-- End Google Tag Manager -->
+<form method="post" action="https://www.worldvision.in/index.aspx" id="form1">
+<div class="aspNetHidden">
+<input type="hidden" name="__EVENTTARGET" id="__EVENTTARGET" value="" />
+<input type="hidden" name="__EVENTARGUMENT" id="__EVENTARGUMENT" value="" />
+<input type="hidden" name="__LASTFOCUS" id="__LASTFOCUS" value="" />
+
+
+<script type="text/javascript">
+//<![CDATA[
+var theForm = document.forms['form1'];
+if (!theForm) {
+    theForm = document.form1;
+}
+function __doPostBack(eventTarget, eventArgument) {
+    if (!theForm.onsubmit || (theForm.onsubmit() != false)) {
+        theForm.__EVENTTARGET.value = eventTarget;
+        theForm.__EVENTARGUMENT.value = eventArgument;
+        theForm.submit();
+    }
+}
+//]]>
+</script>
+
+
+<script src="WebResource92bc.js?d=pynGkmcFUV13He1Qd6_TZEbVeu4eyY_NC4z85u1yt0H9A3Z2wNRR6Eeb9nFeVFx35S9zZCzTqV2fpEvU6jYrWg2&amp;t=635875707181218729" type="text/javascript"></script>
+
+
+<script src="ScriptResource33bc.js?d=x6wALODbMJK5e0eRC_p1LY3Zc16UuwNNUUx_r9fERw_B2iqzl36Itsx1V2AI85Of6vs0pA54H8n072Er_kIcnXHV-lA__j2n3azFO1ktRPJbVUR6CpCkNWR0AOHOq5rJ0&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResourced491.js?d=P5lTttoqSeZXoYRLQMIScOcKkDeyOqDlSz7gnBiAfuIftjfF3maML5kwZuPMztrzyrpv5pXNeHxN8CrACVUAnBPbwjgbgaR3kXOrkNVyoEm9Rlyh3gSHuYgQoqnckeyn0&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResource5370.axd?d=NHo7rzvB81m25b5lv-ojMWoOdXWTnZKA8TNHKGFywOzf6HmwkHYEWRshEVj8bm17H1qYvcvymXYGbc10vad7EWB2TtK39vh1Jncw-YEmLy5gtI4PTklIkUR3L6oRa95J0&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResource643c.axd?d=G7OZOzpYF9XwHB8eN29Yb3A5X_PeHRjw-IHPoEWbifoCpL1E41ESASQxnLHKkC649yl-E-O4Qkd6RTotx0fUdJKwwQp3zhdQOlvvgCr5cKK8gGPAUihKLnVS2SBesYGoz1ZVZdVHuvhWU9tTb6bZVw2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResource028c.axd?d=t8xKct_NbNgBw-XPoRZ-nG02u-vteogWeKFm8f0LG-KUEsxXNZKVzCwIIjpBp1fUY7Q3YJtsuO-c3JC8ckWlbg6xfBWbjMCvWx6EKpYmEKLP-uyHd5QWgD9AlJyxNB5CIXR4j1uA8eJ5_rNbRJmSrw2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResourceff4c.axd?d=cwGphBcvejt2VIyBHnRhTVm-urAq3PYlUq3dR6_DGyUB28g1nxICR72tiu8n9GnMgEpMWWBgIuJrhsmXwba3ZFGGXUbcxEe1pK9g7Kqn4Qmo04qNm4P9NjKVtKbqJmnO0&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResource9967.axd?d=TLZ1vtjBxtO9Jbc2uVK033Ur_cDhSTFxPGb0fH3pCQhV3Ty_CMD_iCzp3bHuGiqIDsk2mc2Y-2Nb6ytPjVgoH8fAXKbUbUwrOqzTSzFibUTMq7DeZ6mRHiMHdPwJzOjGCTWY5RmyZohsaqYpaIbd3A2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResource78a9.axd?d=IDWj4WSOOvkdPRnPVbJVZIiCC_01R-j0C5PKiWnbq0FH-GAg9JT2zKyiuH4Ntlhyg1b8ySOFMFX7uSs6L4TMtq09_O2ZvFCHQhwDXtaEIdENGp62xxVAoiXuLXAHQtB00&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResourced3c9.axd?d=QURf4xOsrV7WTJCWSccZWxkWgB8e7BFjYHcusjqv-TjbJeLJknSFJ7dZp8OTpy1lGorLOhpru0W4AJCc3rp6T83Tg1lREYdSZh9v6TBLFLn946TVpC815wTIcDkMDZ__YmmjkMfdeCzPUAWEW1KbQg2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResource0eef.axd?d=ZT9rkJNR62Xa35oVFu0brQe16eiIGAzH1VlIpPjrupmx-K1VRmRdFxjtdrvkcyPYddFpZT3RChP6XUmx7TEqcxS0rVw3XfsruVoywrdLs8oNiyTb6in2WGnnuqDLpoPT912UjcJhOyb4Jw_K3ZWZmQ2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResource132f.axd?d=dyNR31g23bihdQsCIkXUOMKq4PKK5acLjEmBMzDcpBtybLZXtgQG6GunfOnuf9GRQv4I-gzgD8sIFRLvf3AoTd9PCe1vEzxmy8-DmZD3d3oW-aXTRyrwGz2EQXu0Rx2TGaotxz40thH0xXaEyznAbw2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResourcec416.axd?d=APiGnkSUwteJqB7qVaRTTt_l-eYggQrw9fs4-HTNFixrwm59pzP1a8kVQo3HWFF2HnD5zzgSHhi4D41oBwHEXFeiCTcB5dFRzAXII6bBYEQwxBhFfz3jcoIJykEejV-TcwRXkhkuomYg5_WzhYHHbg2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<script src="ScriptResourcea783.axd?d=pu2ExBiwxefn6RsV2td6q1QFSBod1VlqAtW4K6DH3mrwmD9hYwf3oP6rSDOmJf7sI_3KQU8f696s59-GXlaIAOs8IOjvZtFkqlGbNEBCiBPsa1opLsMRr6WRIeJI-q0KDSYuXZqCUUrhZNGtlICORA2&amp;t=fffffffff2b1ef38" type="text/javascript"></script>
+<div class="aspNetHidden">
+
+    <script type="text/javascript">
+//<![CDATA[
+Sys.WebForms.PageRequestManager._initialize('ctl00$MIScriptManager', 'form1', ['tctl00$upnHeaderRow','upnHeaderRow','tctl00$upnHeaderRow2','upnHeaderRow2','tctl00$ucLogin$upnlLogModel','ucLogin_upnlLogModel','tctl00$ContentPlaceHolder1$childrot','ContentPlaceHolder1_childrot'], [], [], 90, 'ctl00');
+//]]>
+</script>
+
+	
+	<nav class="navbar navbar-default navbar-fixed-top" role="navigation">
+		<div class="row">
+			<div class="col-xs-12">
+			    <div id="upnHeaderRow">
+	
+				<div class="navbar-header">
+					<button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
+						<span class="sr-only">Toggle navigation</span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+						<span class="icon-bar"></span>
+					</button>
+					<a class="navbar-brand" href="index-2.html"><img src="C:\Users\saurabh omer\Desktop\finding kids\www.worldvision.in\CMSAdmin\Uploads\heartkids.png" alt="" width="20" height="15" /></a>
+				</div>
+				<div id="navbar" class="navbar-collapse collapse">
+                    
+                         
+</div>
+				<!--/.nav-collapse -->
+                <div id="upnHeaderRow2">
+	
+				<div class="right-box">
+					
+					
+					<div>
+						<div class="login-btn" style="width:auto;height:auto">
+							<a id="lnklogin" href="#">Login |</a>
+							
+							<a id="lnkRegister" href="#"> Register</a>
+						</div>
+						
+						<!-- Login modal popup(START)-->
+						<input type="submit" name="ctl00$btnDummy" value="" id="btnDummy" style="display:none" />
+						
+						<div id="PnlLoginModelPopUp" class="cart-popup" style="overflow:auto;display:none">
+		
+							<div class="modal-dialog">
+								<div class="modal-content">
+									<div class="modal-header">
+										<div class="hedText offsetb20">
+											<div class="totalText" style="float:left">Log in My World</div>
+											<div class="rightGBox"><input type="image" name="ctl00$imgBtnClose" id="imgBtnClose" title="Click here to close" EnableEventValidation="false" src="images/close1.png" /></div>
+										</div>
+									</div>
+									<div class="modal-body-cust">
+
+<link href="css/gridba3a.css?ver=101" rel="stylesheet" />
+
+<script>
+//function button_click(objTextBox, objBtnID){
+//	if(window.event.keyCode == 13){
+//		document.getElementById(objBtnID).focus();
+//		document.getElementById(objBtnID).click();
+//	}
+//}
+$(document).on("keydown", function (event) {
+    var keycode = (event.keyCode ? event.keyCode : event.which);
+    if (keycode == '13') {
+        $('[id$=radBtnLogin]').trigger("click");
+    }
+});
+</script>
+
+<div style="display: none;">
+	<input type="text" id="PreventChromeAutocomplete" name="PreventChromeAutocomplete" autocomplete="address-level4" />
+</div>
+<div id="ucLogin_upnlLogModel">
+			
+    <div class="modal-body">
+        <div onkeypress="javascript:return WebForm_FireDefaultButton(event, &#39;ucLogin_radBtnLogin&#39;)">
+				
+			<div class="row">
+				<div class="log-in offsetpt20">
+					
+					<div class="login-box col-md-12 offsetmt10" style="width:100%;border:none">
+						<div class="col-md-7 offsetb50" style="width:88%">
+							<div class="form-group col-xs-12 col-md-12">
+								<label class="col-sm-3 control-label">Email ID*</label>
+								<div class="col-sm-9">
+									<input name="ctl00$ucLogin$txtFocusedInputUID" type="text" autocomplete="off" onchange="javascript:setTimeout(&#39;__doPostBack(\&#39;ctl00$ucLogin$txtFocusedInputUID\&#39;,\&#39;\&#39;)&#39;, 0)" onkeypress="if (WebForm_TextBoxKeyHandler(event) == false) return false;" id="ucLogin_txtFocusedInputUID" title="User Name" class="form-control" autocomplete="off" />
+								</div>
+							</div>
+							<div class="form-group col-xs-12 col-md-12">
+								<label class="col-sm-3 control-label">Password*</label>
+								<div class="col-sm-9">
+									<input name="ctl00$ucLogin$txtfocusedInputPWD" type="password" autocomplete="off" readonly="readonly" id="ucLogin_txtfocusedInputPWD" title="password" class="form-control" autocomplete="off" onkeypress="button_click(this,&#39;ucLogin_radBtnLogin&#39;)" />
+								</div>
+							</div>
+							<div class="form-group col-xs-12 col-md-12">
+								<div class="col-sm-9 col-sm-offset-3">
+									<label>
+										<input name="ctl00$ucLogin$chkRememberMe" type="checkbox" id="ucLogin_chkRememberMe" />
+										<em class="fsize13 grey">Remember me next time I visit</em>
+									</label>
+								</div>
+							</div>
+							<div class="form-group col-xs-12 col-md-12">
+								<div class="col-sm-9 col-sm-offset-3">
+									<input type="submit" name="ctl00$ucLogin$radBtnLogin" value="Login" id="ucLogin_radBtnLogin" class="btn Giftbtn pull-left" />
+									<p class="pull-left">
+										<a id="ucLogin_lnkForgot" href="javascript:__doPostBack(&#39;ctl00$ucLogin$lnkForgot&#39;,&#39;&#39;)">Forgot Password?</a>
+										<a id="ucLogin_lnkNewRegister" href="javascript:__doPostBack(&#39;ctl00$ucLogin$lnkNewRegister&#39;,&#39;&#39;)">New User</a>
+										
+									</p>
+								</div>
+								<div class="clearfix"></div>
+							</div>
+							
+							
+						</div>
+						
+						<div class="clearfix"></div>
+					</div>
+				</div>
+			</div>
+         
+			</div>
+    </div> 
+	
+		</div>
+</div>
+								</div>
+							</div>
+						
+	</div>
+						<!-- Login modal popup(END)-->
+					</div>
+				</div>
+			    
+</div>
+			</div>
+		</div>
+	</nav>
+	<div class="bootstrapAlert">
+		<div id="alert_placeholderMain" ></div>
+		
+		
+	</div>
+	<div>
+    
+    <div id="myCarousel slide1" class="sliders slide" data-ride="carousel">
+		<!-- Indicators -->
+		<ol class="carousel-indicators"><li data-target="#myCarousel" data-slide-to='0' class="active"></li><li data-target="#myCarousel" data-slide-to='1'></li></ol>
+		<!-- Wrapper for slides -->
+		<div class="carousel-inner"><div class="item active" id="CarouselSlide0"><img src='CMSAdmin/Uploads/image5.jpg' alt='CarouselSlide0' width='100%' height='auto' /><div class="col-xs-12 col-sm-6 col-md-6 carousel-caption"><div class="slideText"><h2 class="slideText1 padt bk"></h2> <br/></div></div></div><div class="item" id="CarouselSlide1"><img src='CMSAdmin/Uploads/images6.jpeg' alt='CarouselSlide1' width='100%' height='auto' /><div class="col-xs-12 col-sm-6 col-md-6 carousel-caption"><div class="slideText"><h2 class="slideText1 padt bk"><p style="color:#fff" class="fsize38 flh50 offsetp50">A priceless gift of<br />a new beginning</p><br /> <a href="map.html" class="mob"><input type="button" value="EXPLORE NOW" class="btn btn-donate fsize20"></a></h2> <br/></div></div></div></div>
+		<!-- Left and right controls -->
+	
+	</div>
+    <div class="wrp">
+        <div class="iconScroll"><img src="images/icon-scroll.png" alt="scroll" width="60" height="60" /></div>
+                <div class="clr"></div>
+                <div class="clr"></div>
+    </div>
+    </div>
+    </div>
+    </div>
+    
+    <div class="slide" id="slide3" data-slide="6">
+        <div class="">
+        <div class="col-xs-12 col-sm-6 col-md-6 wrp5 bg1slide">
+            <div class="section3">
+                <div class="col-md-1">&nbsp;</div>
+                <div id="slider1_container" class="col-md-11 col-xs-12 SliderLWrp element3" style="top:10px;">
+                    <!-- Loading Screen -->
+                    <div u="loading" class="loading_div"><div class="loading_div1"></div><div class="loading_div2"></div></div>
+                    <!-- Slides Container -->
+                    <h1>Our Latest Work</h1>
+                    <div u="slides" class="SliderL"><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Mobile Clinic to the rescue</h2><p>Thanks to the Ford Mobile Clinic, Ponamma was saved from a near-death experience. The Mobile Clinic was launched by World Vision India and Ford to provide health services for children and families living in remote locations. More than 18,544 children and adults have benefited through the Mobile Clinic since its launch in 2016.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>A HungerFree India is Possible</h2><p>India ranks 100 among 119 countries on the Global Hunger Index (GHI) indicating alarming hunger levels. But, we believe a #HungerFree India is possible. Each of us can make a difference. And together, we can make a bigger impact towards curbing malnutrition among children. World Vision India is a proven and dedicated partner in the fight to end hunger and malnutrition— even in the hard to reach places. Join us in our fight against hunger and malnutrition</br></br></p></div><div><img src="Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Congratulations Oviya!</h2><p>Oviya has completed her engineering course from Sathyabama, Chennai, and is now placed in a reputed IT firm. A big thank you to Sathyabama University for supporting her studies. Oviya, a lively and cheerful 21-year-old, was World Vision India’s sponsored child. </br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Green today for kids tomorrow</h2><p>28 employees from Thomson Reuters provided awareness on hygiene and environment conservation through street plays in the communities we serve in Gundlupet, Karnataka. Papaya and pomegranate saplings were distributed to families and even planted in some households. Tree guards were put up to ensure that saplings grow well and are sustained for the future.
+</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Our new project</h2><p>World Vision India along with Unicef India launched the CANAH project for neonatal and maternal health in Bilaspur. Cabinet minister, Mr. Agarwal officially inaugurated the project.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Fire drills</h2><p>Children and youth from a community we serve in Delhi were trained on fire safety. This community was razed by fire last year. We had provided them with relief and now we are training them to be first responders. </br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Suraj goes to Germany</h2><p>Suraj Kumar our sponsored child from the communities we serve in Imphal is among the 15 boys from Manipur selected by the TATA Trusts and U Sports for a premier collaborative football-training programme in Germany. They will be training in Germany for six years and are optimistic in making a mark in the FIFA World Cup 2026.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Child Friendly Space</h2><p>A CFS (Child Friendly Space) centre in Bhojpur helped 350 children recover from distress due to the floods last year. The CFS had created an environment where children were absorbed in fun, laughter and games.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Wall Paintings</h2><p>Walls painting in the communities we serve in Jaipur with child helpline nos, help children and families come forward in reporting cases of abuse and violence.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Digital Classrooms</h2><p>Through the Lions Clubs India and World Vision India education project, 1290 children learn through digital classrooms. </br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Pune Partners Meet</h2><p>A Partners Meet was organized in Pune on June 4th. Around 86 sponsors participated in the event. World Vision India makes it a point to connect with sponsors every quarter in different cities. Sponsors are enlightened on the progress of the community and the issues prevalent there. </br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Drought Relief</h2><p>World Vision India is actively responding to the affected children and families. At present, we are focussing on 12 districts in 6 states viz. Telegana, Andhra Pradesh, Maharashtra, Madhya Pradesh, Uttar Pradesh and Odisha. </br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Pinkathon!</h2><p>145 women participated on behalf of World Vision India in the marathon organized by Pinkathon on June 5th. The Pinkathon is India’s Biggest Women’s Run, created with the specific purpose of getting women to adopt a fitter lifestyle for themselves and their families, and to highlight the need for increased awareness on other issues that put women’s lives at risk.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Lions Clubs Partnership</h2><p><span style="letter-spacing:0.4px;">International Association of Lions Clubs partners with World Vision India to support 25,000 children's education. The campaign will focus on ensuring quality education in approximately 200 Government schools across the country where World Vision India serves. It is our joy to see lives being enlightened through this programme.</span></br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Mahindra World City</h2><p>Mahindra World City Developers Ltd. in partnership with World Vision India opened a children's park in Veerapuram village, South of Chennai. The park encompasses play equipment like multi-play station, swings, flat rotator and seesaws. A badminton and volleyball court is also being planned for the park. </br></br></p></div></div>
+                    <span u="arrowleft" class="jssorb08l" style="width:50px;height:50px;top:8px;left:8px;visibility:hidden"></span>
+                    <span u="arrowright" class="jssorb08r" style="width:50px;height:50px;top:8px;right:-3px"></span>
+                </div>
+            </div>
+        </div>
+        <div class="col-xs-12 col-sm-6 col-md-6 wrp5 bg2slide">
+            <div class="section3">
+                <div id="slider2_container" class="col-xs-11 SliderLWrp2 element4" style="top:10px;">
+                    <!-- Loading Screen -->
+                    <div u="loading" class="loading_div"><div class="loading_div1"></div><div class="loading_div2"></div></div>
+                    <h1>Stories of change</h1>
+                    <!-- Slides Container -->
+                    <div u="slides" class="SliderL"><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>The goats helped Vidhya get better</h2><p>World Vision India provided Vidhya’s family with a pair of goats in 2015 and again in 2016. Before this, her parents were daily wage labourers. But now the family has 22 goats and they make a living by selling the goats. The goat's milk also provides nutrition for Vidhya and her brother Prince</br></br><a href='#' >READ MORE</a></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Heena and Arti learn the art of combat</h2><p>17-year-old Heena and her 16-year-old friend Arti were among the 250 girls from their neighbourhood who participated in the self-defense classes organised by World Vision India in partnership with the Delhi police. The girls have learned different techniques to escape physical assault and the tools to confront and report harassment.</br></br><a href='#' >READ MORE</a></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>A Gift of a Medicated Mosquito Net</h2><p>As three-year-old Ruthi lay sick in her bed, her parents knew something was terribly wrong with their daughter. She had an excruciating headache, a fever, and kept vomiting every now and then. With hours going by, she was almost lying lifeless on her bed.</br></br><a href='#' >READ MORE</a></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Kashish</h2><p>Kashish stands on a scale to get her weight checked at the anganwadi. The playful 5-year-old was once listless and lethargic. Her personality perked up once she gained weight as her mother Solenka learned to cook more nutritious food at the anganwadi. 
+
+World Vision India supports anganwadis in its programme by identifying and addressing malnutrition among children.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Saraswathi</h2><p>Saraswathi says she is happy to be part of this cooking and feeding programme as she learns and interacts with other mothers. 
+All children are now eating well because of change in the taste.
+“Previously I was not aware about the preparation of healthy snacks that can be prepared at home, now I can prepare some items at home because of the learnings that I received through UMANG training”, says Saraswathi.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Mary</h2><p>Mary’s son 14-month-old Jeevan was identified as a severe acute malnourished child. He was so weak that he could barely walk. After being identified as severly malnourished, World Vision India referred Jeevan to the Nutrition Rehabilitation Centre (NRC). After treatment at the NRC, his family was given a food basket containing all essential, nutritious ingredients. Mary was taught to prepare nutritious meals.
+
+Today, Jeevan has gained weight and is no more a malnourished child. He is normal, his appetite has improved and he is active.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Food Basket Programme</h2><p>To combat malnourishment among children, we use the Food Basket Programme. Children who are severely malnourished are referred to a health facility such as a nutrition rehabilitation centre for medical and therapeutic intervention. After that, we educate the mothers/caregivers on feeding practices.
+
+Once the children are discharged from the facility, we give them food basket for a period of 6 months. Food basket contains essential ingredients necessary to prepare a nutritious meal.</br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Kanishkasri</h2><p>3-year-old Kanishkasri, daughter of Logasundaram was moderately underweight and weighed only 10 kgs She was enrolled in World Vision India’s UMANG (Urgent Mangament and Action for Nutritional Growth) programme which started on 12th June 2017. 
+After 30 days into the programme, Kanishkasri’s weight increased to 11 kgs. After 60 days of the programme she weighed 13 kgs.  
+Kanishkasri’s mother, Saraswathi says her daughter now eats healthy food. Saraswathi has learnt to make a variety of new recipes that Kanishkasri likes. Even when Saraswathi forgets to go for the UMANG meetings, Kanishkasri reminds her to go. </br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Puneet</h2><p>Kanaka’s 4-year-old son Puneet now regularly attends the health and nutrition session conducted in the communities we serve in Visakhapatnam. Puneet was also severely malnourished and referred to the Nutrition Rehabilitation Center (NRC). Kanaka was instructed on healthy cooking and was given a food basket to support Puneet’s progress. He has also gained weight by one kg. </br></br></p></div><div><img src="CMSAdmin/Uploads/Happy Kids.png" class="cent" alt="" width='' height='' /><h2>Shivani – A Story of Victory</h2><p>It’s the night of Diwali, 19-year-old Shivani carefully places candles along the steps of the front door of her house. The soft candlelight illuminates her face. Just as the festival of lights denotes victory over darkness, Shivani’s story is nothing less of a victory. </br></br><a href='#' >READ MORE</a></p></div></div>
+                    <span u="arrowleft" class="jssorb08l" style="width:50px;height:50px;top:8px;left:-60px"></span>
+                    <span u="arrowright" class="jssorb08r" style="width:50px;height:50px;top:8px;right:-50px;visibility:hidden"></span>
+                </div>
+            </div>
+        </div>
+        </div>
+    </div>
+   
+	<div id="stickyfooter">
+		<div class="container mobilenav">
+			<ul class="stickynav">
+				<li><a href="#">Finding Kids</a></li>
+				<li><a href="#">Our Latest Work</a></li>
+				<li><a href="#">Partner’s Speak</a></li>
+				<li><a href="#">Stories of change</a></li>
+				<li><a href="#">Media Gallery</a></li>
+			</ul>
+		</div>
+		<!-- content-wrap END -->
+	</div>
+	<!-- Sticky Footer END -->
+	<input type="hidden" name="ctl00$hdnfGACode" id="hdnfGACode" value="&lt;!-- Google Tag Manager 26/05/2016-->
+&lt;noscript>&lt;iframe src=&quot;//www.googletagmanager.com/ns.html?id=GTM-MR7QTL&quot;
+height=&quot;0&quot; width=&quot;0&quot; style=&quot;display:none;visibility:hidden&quot;>&lt;/iframe>&lt;/noscript>
+(function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({&#39;gtm.start&#39;:
+new Date().getTime(),event:&#39;gtm.js&#39;});var f=d.getElementsByTagName(s)[0],
+j=d.createElement(s),dl=l!=&#39;dataLayer&#39;?&#39;&amp;l=&#39;+l:&#39;&#39;;j.async=true;j.src=
+&#39;//www.googletagmanager.com/gtm.js?id=&#39;+i+dl;f.parentNode.insertBefore(j,f);
+})(window,document,&#39;script&#39;,&#39;dataLayer&#39;,&#39;GTM-MR7QTL&#39;);
+&lt;!-- End Google Tag Manager -->" />
+    <a id="back-to-top" href="javascript:;" class="back-to-top" role="button" title="Back to top" data-toggle="tooltip">^</a>
+
+
+<script type="text/javascript">
+//<![CDATA[
+(function() {var fn = function() {Sys.Extended.UI.ModalPopupBehavior.invokeViaServer('ModalPopupLogin', false); Sys.Application.remove_load(fn);};Sys.Application.add_load(fn);})();Sys.Application.add_init(function() {
+    $create(Sys.Extended.UI.ModalPopupBehavior, {"BackgroundCssClass":"modal-backdrop fade in","PopupControlID":"PnlLoginModelPopUp","dynamicServicePath":"/index.aspx","id":"ModalPopupLogin"}, null, null, $get("btnDummy"));
+});
+//]]>
+</script>
+</form>
+<script type="text/javascript">
+function validateEmail(sender, args){
+	var chkbox = document.getElementById("txtNewsEmail");
+	var uEmail;
+	var temp = document.getElementById("txtNewsEmail");
+	uEmail = temp.value;
+	var re = /\w+([-+.']\w+)*@\w+([-.]\w+)*\.\w+([-.]\w+)*/;
+	if (uEmail == "" || uEmail == "Email"){
+		//alert("Please Enter Email.");
+		$('#alert_placeholderMain').html('<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Please Enter Email. </div>');
+		args.set_cancel(true);
+	}else if (!re.test(uEmail)){
+		//alert("Please Enter Valid Email.");
+		$('#alert_placeholderMain').html('<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Please Enter Valid Email. </div>');
+		args.set_cancel(true);
+	}else{
+		args.set_cancel(false);
+	}
+}
+function HandleClose(){
+	$('#alert_placeholderMain').html('<div class="alert alert-danger"><a href="#" class="close" data-dismiss="alert" aria-label="close">&times;</a>Are you sure you want close? </div>');
+	//alert("Are you sure you want close? ");
+	PageMethods.AbandonSession();
+}
+</script>
+
+<script type="text/javascript" src="js/jquery.min.js"></script>
+<script type='text/javascript' src="dist/js/jquery-ui-1.9.2.js"></script>
+<script type="text/javascript" src="dist/js/readmore.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="dist/js/bootstrap-select.js"></script>
+
+<script type="text/javascript" src="dist/js/jquery.nicescroll.js"></script>
+<script type="text/javascript" src="js/jquery.stellar.min.js"></script>
+<script type="text/javascript" src="js/waypoints.min.js"></script>
+<script type="text/javascript" src="js/jssor.js"></script>
+<script type="text/javascript" src="js/jssor.slider.js"></script>
+<script type="text/javascript" src="js/js-two.js"></script>
+
+<script type="text/javascript">
+(function ($){
+    $(".eventScroll").niceScroll({ touchbehavior: false, cursorcolor: "#555555", cursoropacitymax: 0.7, cursorwidth: 6, background: "#ccc", autohidemode: false });
+});
+</script>
+<script type="text/javascript">
+/*** This javascript file checks for the brower/browser tab action.
+* It is based on the file menstioned by Daniel Melo.
+* Reference: http://stackoverflow.com/questions/1921941/close-kill-the-session-when-the-browser-or-tab-is-closed*/
+var validNavigation = false;
+function wireUpEvents(){
+	 /*** For a list of events that triggers onbeforeunload on IE
+	  * check http://msdn.microsoft.com/en-us/library/ms536907(VS.85).aspx
+	  ** onbeforeunload for IE and chrome
+	  * check http://stackoverflow.com/questions/1802930/setting-onbeforeunload-on-body-element-in-chrome-and-ie-using-jquery*/
+	var dont_confirm_leave = 0; //set dont_confirm_leave to 1 when you want the user to be able to leave without confirmation
+	var leave_message = 'You sure you want to leave?'
+	function goodbye(e){
+		debugger
+		if(!validNavigation){
+			if (dont_confirm_leave !== 1){
+				if(!e){
+					e = window.event;
+					//e.cancelBubble is supported by IE - this will kill the bubbling process.
+					e.cancelBubble = true;
+					e.returnValue = leave_message;
+				}
+				//e.stopPropagation works in Firefox.
+				if(e.stopPropagation){
+					e.stopPropagation();
+					e.preventDefault();
+				}
+				//return works for Chrome and Safari
+				return leave_message;
+			}
+		}else{
+			validNavigation = false;
+		}
+	}
+	window.onbeforeunload = goodbye;
+	// window.onbeforeunload = function (){ return false };
+	// Attach the event keypress to exclude the F5 refresh
+	BindEvents();
+}
+function BindEvents(){
+	$(document).bind('keypress', function(e){
+		if (e.keyCode == 116){
+			dontWarn();
+		}
+	});
+	// Attach the event click for all links in the page
+	$("a").bind("click", function(){
+		dontWarn();
+	});
+
+	// Attach the event submit for all forms in the page
+	// $("form").bind("submit", function (){
+	// validNavigation = true;
+	//});
+	// Attach the event click for all inputs in the page
+	$("input[type=submit]").bind("click", function(){
+		 dontWarn();
+	});
+	// Attach the event click for all inputs in the page
+	$("button[type=button]").bind("click", function(){
+		 dontWarn();
+	});
+}
+function dontWarn(){
+	// Don't warn
+	debugger
+	validNavigation = true;
+	// ...but if we're still on the page a second later, set the flag again
+}
+// Wire up the events as soon as the DOM tree is ready
+$(document).ready(function(){
+	//alert("");
+	//wireUpEvents();
+});
+$(document).ready(function (){
+    $(window).scroll(function (){
+        if ($(this).scrollTop() > 50){ $('#back-to-top').fadeIn(); }
+        else { $('#back-to-top').fadeOut(); }
+    });
+    $('#back-to-top').click(function (){
+        $('#back-to-top').tooltip('hide');
+        $('body,html').animate({ scrollTop: 0 }, 800);
+        return false;
+    });
+    var windwidth = $(window).width();
+    if (windwidth >= 800){
+        $(".NewsSlide .item").addClass("block"); $(".arrowcontrol").addClass("dnone");
+    } else {
+        $(".NewsSlide .item").addClass("dnone"); $(".arrowcontrol").addClass("block");
+    }
+});
+</script>
+<script type="text/javascript">
+(function (){
+    'use strict'; if (navigator.userAgent.match(/IEMobile\/10\.0/)){
+        var msViewportStyle = document.createElement('style')
+        msViewportStyle.appendChild(document.createTextNode('@-ms-viewport{width:auto!important}'))
+        document.querySelector('head').appendChild(msViewportStyle)
+    }
+})();
+</script>
+</body>
+
+<!-- Mirrored from www.worldvision.in/index.aspx by HTTrack Website Copier/3.x [XR&CO'2014], Sat, 10 Feb 2018 08:47:29 GMT -->
+</html>

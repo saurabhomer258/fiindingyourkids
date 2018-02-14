@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta name="viewport" content="initial-scale=1.0, user-scalable=no">
+    <meta charset="utf-8">
+    <title>Marker Labels</title>
+      <style>
+      /* Always set the map height explicitly to define the size of the div
+       * element that contains the map. */
+      #map {
+        height: 100%;
+      }
+      /* Optional: Makes the sample page fill the window. */
+      html, body {
+        height: 100%;
+        margin: 0;
+        padding: 0;
+        overflow: hidden;
+      }
+      #floating-panel {
+        position: absolute;
+        top: 570px;
+          width: 100%;
+        
+        z-index: 5;
+        background-color: #fff;
+        padding: 5px;
+        border: 1px solid #999;
+        text-align: center;
+        font-family: 'Roboto','sans-serif';
+        line-height: 30px;
+        padding-left: 10px;
+      }
+        #b1
+          {
+                opacity: 1;
+          }
+    
+    </style>
+  </head>
+  <body>
+    <div id="map" style="width:100%;height:600px;"></div>
+      
+
+        <script>
+            var count=0;
+        
+        function myMap() 
+        {
+          var mapCanvas = document.getElementById("map");
+          var myCenter=new google.maps.LatLng(23.644524198573688,87.5390625);
+          var mapOptions = {center: myCenter, zoom: 7};
+          var map = new google.maps.Map(mapCanvas, mapOptions);
+          google.maps.event.addListener(map, 'click', function(event) {
+              if(count==0)
+                  {
+                  placeMarker(map, event.latLng);
+              count=1;
+                  }
+              
+            
+          });
+        }
+            var markers=[];
+        function removeMarker()
+            {
+                  
+                   count=0;
+                setMapOnAll(null);
+            }
+            
+        function setMapOnAll(map) 
+            {
+        for (var i = 0; i < markers.length; i++) 
+        {
+          markers[i].setMap(map);
+        }
+      }
+        function placeMarker(map, location) {
+         
+          var marker = new google.maps.Marker({
+            position: location,
+            map: map
+          });
+        markers.push(marker);
+          var infowindow = new google.maps.InfoWindow({
+            content: 'Latitude: ' + location.lat() + '<br>Longitude: ' + location.lng()+'<br> <a href="mvk.html"><button>click here for give missing kits details </button></a>'
+            
+          });
+          
+          infowindow.open(map,marker);
+        }
+        </script>
+
+  
+<script async defer src="https://maps.googleapis.com/maps/api/js?key=AIzaSyDBzJZIfj9y_PSLD37XC_lUEgCvtxDU3_Y&callback=myMap"></script>
+       <div id="floating-panel">
+        <input type="button" value="Missing Children" />
+        <input type="button" onclick="fun()" value="add child" />
+        <input type="button" onclick="removeMarker()" value="Refresh" />
+        
+        <input type="button"  value="finding children" />
+      </div>
+
+  </body>
+</html>
